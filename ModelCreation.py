@@ -50,24 +50,3 @@ history = model.fit(xs, ys, epochs=100, verbose=1)
 
 # Save a model using the HDF5 format
 model.save("TrumpModel.h5")
-
-# Make a prediction
-flag = True
-next_words = 20
-while (flag):
-
-    input_text = input("Enter the starting text: ")
-    if input_text == 'quit':
-        flag = False
-    for i in range(next_words):
-        token_list = tokenizer.texts_to_sequences([input_text])[0]
-        token_list = pad_sequences([token_list], maxlen=max_sequence_length - 1, padding='pre')
-        predicted = np.argmax(model.predict(token_list), axis=-1)
-        output_word = ""
-        for word, index in tokenizer.word_index.items():
-            if index == predicted:
-                output_word = word
-                break
-        input_text += " " + output_word
-
-    print(input_text)
