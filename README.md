@@ -11,3 +11,5 @@ Dataset came from: https://www.kaggle.com/shivammehta007/trump-tweetcsv
       - The model isn't perfect, but it can generate some interesting comments.
 - ModelCreation.py
    - Code for pre-processing the data and creating the tensorflow model. 
+
+I deployed the model using heroku. If you want to test it out, check out https://politician-tweet-generator.herokuapp.com/
