@@ -1,5 +1,5 @@
 # TensorFlowTweetGenerator
-Generates tweets of a specific politician who will **not** be named.
+Generates text based on previous tweets of a politician.
 
 Dataset came from: https://www.kaggle.com/shivammehta007/trump-tweetcsv
 
